@@ -1,0 +1,151 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: 250 250 250; /* #FAFAFA */
+  --foreground: 20 14.3% 4.1%;
+  --muted: 60 4.8% 95.9%;
+  --muted-foreground: 25 5.3% 44.7%;
+  --popover: 0 0% 100%;
+  --popover-foreground: 20 14.3% 4.1%;
+  --card: 0 0% 100%; /* #FFFFFF */
+  --card-foreground: 20 14.3% 4.1%;
+  --border: 20 5.9% 90%;
+  --input: 20 5.9% 90%;
+  --primary: 122 39% 49%; /* #2E7D32 */
+  --primary-foreground: 0 0% 98%;
+  --secondary: 60 4.8% 95.9%;
+  --secondary-foreground: 24 9.8% 10%;
+  --accent: 60 4.8% 95.9%;
+  --accent-foreground: 24 9.8% 10%;
+  --destructive: 0 84.2% 60.2%;
+  --destructive-foreground: 60 9.1% 97.8%;
+  --ring: 20 14.3% 4.1%;
+  --radius: 0.5rem;
+  
+  /* Custom colors for CO2 calculator */
+  --primary-light: 122 39% 59%; /* #4CAF50 */
+  --primary-dark: 122 56% 24%; /* #1B5E20 */
+  --secondary-orange: 14 100% 57%; /* #FF5722 */
+  --warning: 45 100% 51%; /* #FFC107 */
+  --danger: 4 90% 58%; /* #F44336 */
+  --info: 207 90% 54%; /* #1976D2 */
+  --success: 122 39% 49%; /* #4CAF50 */
+}
+
+.dark {
+  --background: 240 10% 3.9%;
+  --foreground: 0 0% 98%;
+  --muted: 240 3.7% 15.9%;
+  --muted-foreground: 240 5% 64.9%;
+  --popover: 240 10% 3.9%;
+  --popover-foreground: 0 0% 98%;
+  --card: 240 10% 3.9%;
+  --card-foreground: 0 0% 98%;
+  --border: 240 3.7% 15.9%;
+  --input: 240 3.7% 15.9%;
+  --primary: 122 39% 49%;
+  --primary-foreground: 0 0% 98%;
+  --secondary: 240 3.7% 15.9%;
+  --secondary-foreground: 0 0% 98%;
+  --accent: 240 3.7% 15.9%;
+  --accent-foreground: 0 0% 98%;
+  --destructive: 0 62.8% 30.6%;
+  --destructive-foreground: 0 0% 98%;
+  --ring: 240 4.9% 83.9%;
+  --radius: 0.5rem;
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply font-inter antialiased bg-background text-foreground;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', sans-serif;
+  }
+}
+
+/* Custom utility classes for the CO2 calculator */
+.font-inter {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', sans-serif;
+}
+
+.text-primary-light {
+  color: hsl(var(--primary-light));
+}
+
+.text-primary-dark {
+  color: hsl(var(--primary-dark));
+}
+
+.text-secondary-orange {
+  color: hsl(var(--secondary-orange));
+}
+
+.text-warning {
+  color: hsl(var(--warning));
+}
+
+.text-danger {
+  color: hsl(var(--danger));
+}
+
+.text-info {
+  color: hsl(var(--info));
+}
+
+.text-success {
+  color: hsl(var(--success));
+}
+
+.bg-primary-light {
+  background-color: hsl(var(--primary-light));
+}
+
+.bg-primary-dark {
+  background-color: hsl(var(--primary-dark));
+}
+
+.bg-secondary-orange {
+  background-color: hsl(var(--secondary-orange));
+}
+
+.bg-warning {
+  background-color: hsl(var(--warning));
+}
+
+.bg-danger {
+  background-color: hsl(var(--danger));
+}
+
+.bg-info {
+  background-color: hsl(var(--info));
+}
+
+.bg-success {
+  background-color: hsl(var(--success));
+}
+
+.border-primary-light {
+  border-color: hsl(var(--primary-light));
+}
+
+.border-warning {
+  border-color: hsl(var(--warning));
+}
+
+.border-danger {
+  border-color: hsl(var(--danger));
+}
+
+.border-info {
+  border-color: hsl(var(--info));
+}
+
+.border-success {
+  border-color: hsl(var(--success));
+}
