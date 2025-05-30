@@ -1,0 +1,93 @@
+🌱 Hydroponics CO₂ Flow Estimator – Full Concept
+🔧 Purpose
+A free, browser-based calculator that helps indoor growers determine:
+
+Ideal CO₂ ppm levels based on grow room dimensions
+
+CO₂ release rate in L/min or g/hr
+
+Cylinder size needed per week/month
+
+Recommended regulator settings
+
+Safety tips and usage best practices
+
+🧮 Key Inputs (User Form Fields)
+Field	Type	Purpose
+Room Length (m)	Number Input	Dimension for volume calc
+Room Width (m)	Number Input	Dimension for volume calc
+Room Height (m)	Number Input	Dimension for volume calc
+Target CO₂ Level (ppm)	Dropdown (400-1500 ppm)	Defines enrichment level
+Hours of Enrichment	Number Input (per day)	Adjusts for light cycles
+Days per Week	Number Input	Frequency of use
+Ventilation Type	Dropdown (Sealed/Exhausting)	Affects CO₂ retention
+Cylinder Type	Dropdown (6kg, 10kg, 20kg)	Used for output comparison
+
+📈 Outputs
+Output	Description
+Room Volume (m³)	Auto-calculated
+Daily CO₂ Needed (g or L)	Based on volume and target ppm
+Total Weekly Usage	For cylinder planning
+Suggested Cylinder Size	Based on frequency
+Recommended Regulator Flow Rate	g/hr or L/min
+Duration Each Cylinder Will Last	ROI driver
+Safety Guidance	Inline notes & expandable FAQs
+
+🛠️ How It Works (Backend Logic Overview)
+Volume Calculation
+Volume (m³) = Length × Width × Height
+
+CO₂ Requirement Calculation
+Using standard enrichment formula:
+CO₂ grams = Volume (m³) × Target PPM × 0.0018
+
+Adjustment for Time
+If CO₂ is used only during lighting (e.g., 12hr/day), adjust consumption accordingly.
+
+Cylinder Comparison Logic
+6kg = ~3000L CO₂
+10kg = ~5000L CO₂
+20kg = ~10000L CO₂
+Estimate duration by dividing weekly CO₂ use by bottle capacity.
+
+🔐 Safety Tips Integration
+CO₂ Safety Threshold: Warn if ppm input > 1500
+
+Use a CO₂ Monitor: Pop-up recommendation for safety gear
+
+Ventilation Notes: Explain risks of poor airflow
+
+Storage Warnings: Compressed gas handling best practices
+
+Clickable HSE PDF Links for compliance
+
+🎯 SEO Optimization
+Include these keywords:
+
+“CO2 calculator for hydroponics”
+
+“CO2 grow room calculator”
+
+“CO2 regulator settings for grow tent”
+
+“how much CO2 for hydroponics”
+
+“CO2 for indoor plants”
+
+“grow room CO2 chart”
+
+And sprinkle variations like:
+
+“enriching hydroponics with CO2”
+
+“CO2 regulator setup for plants”
+
+“best CO2 level for cannabis grow room” (optional depending on audience focus)
+
+💡 Bonus Features
+Print or Export to PDF: For keeping logs
+
+Stockist Locator Integration: “Where to buy CO₂ tanks”
+
+Lead Capture Popup: For reorder reminders or bulk delivery
+
