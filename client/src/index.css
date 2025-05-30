@@ -4,17 +4,17 @@
 @tailwind utilities;
 
 :root {
-  /* Neumorphism earthy color palette */
-  --background: #D7D3CF; /* Light beige background */
+  /* Enhanced neumorphism earthy color palette */
+  --background: #B5B19C; /* Warm grey background for better contrast */
   --foreground: #173015; /* Deep forest green text */
-  --muted: #B5B19C; /* Warm grey */
-  --muted-foreground: #64734B; /* Medium olive */
-  --popover: #D7D3CF; /* Light beige */
+  --muted: #909470; /* Sage green for muted elements */
+  --muted-foreground: #3A512D; /* Dark olive for muted text */
+  --popover: #D7D3CF; /* Light beige for popovers */
   --popover-foreground: #173015;
-  --card: #D7D3CF; /* Light beige cards */
+  --card: #D7D3CF; /* Light beige cards for contrast */
   --card-foreground: #173015;
-  --border: #B5B19C; /* Warm grey borders */
-  --input: #B5B19C; /* Warm grey inputs */
+  --border: #64734B; /* Medium olive borders */
+  --input: #D7D3CF; /* Light beige inputs */
   --primary: #64734B; /* Medium olive primary */
   --primary-foreground: #D7D3CF;
   --secondary: #909470; /* Sage green */
@@ -26,20 +26,26 @@
   --ring: #64734B;
   --radius: 1.5rem; /* Larger radius for neumorphism */
   
-  /* Neumorphism specific colors */
-  --neu-light: #D7D3CF; /* Lightest shade */
-  --neu-medium-light: #B5B19C; /* Medium light */
-  --neu-medium: #909470; /* Medium */
-  --neu-medium-dark: #64734B; /* Medium dark */
-  --neu-dark: #3A512D; /* Dark */
-  --neu-darkest: #173015; /* Darkest */
+  /* Enhanced neumorphism specific colors with better contrast */
+  --neu-light: #D7D3CF; /* Lightest shade - card surfaces */
+  --neu-medium-light: #C5C1BD; /* Medium light - subtle variations */
+  --neu-medium: #909470; /* Medium - sage accents */
+  --neu-medium-dark: #64734B; /* Medium dark - primary actions */
+  --neu-dark: #3A512D; /* Dark - important elements */
+  --neu-darkest: #173015; /* Darkest - text and icons */
   --neu-very-dark: #050F07; /* Very dark accent */
   
-  /* Neumorphism shadows */
-  --shadow-inset-light: inset 6px 6px 12px #c4c0bc, inset -6px -6px 12px #eae6e2;
-  --shadow-raised-light: 6px 6px 12px #c4c0bc, -6px -6px 12px #eae6e2;
-  --shadow-pressed: inset 4px 4px 8px #c4c0bc, inset -4px -4px 8px #eae6e2;
-  --shadow-floating: 8px 8px 16px #c4c0bc, -8px -8px 16px #eae6e2;
+  /* Enhanced neumorphism shadows with more depth */
+  --shadow-inset-light: inset 8px 8px 16px #b8b4b0, inset -8px -8px 16px #f2eeea;
+  --shadow-raised-light: 8px 8px 16px #b8b4b0, -8px -8px 16px #f2eeea;
+  --shadow-pressed: inset 6px 6px 12px #b8b4b0, inset -6px -6px 12px #f2eeea;
+  --shadow-floating: 12px 12px 24px #b8b4b0, -12px -12px 24px #f2eeea;
+  
+  /* Color-specific shadows for different elements */
+  --shadow-sage-inset: inset 6px 6px 12px #7a8464, inset -6px -6px 12px #a6a47c;
+  --shadow-sage-raised: 6px 6px 12px #7a8464, -6px -6px 12px #a6a47c;
+  --shadow-olive-inset: inset 6px 6px 12px #586242, inset -6px -6px 12px #708454;
+  --shadow-olive-raised: 6px 6px 12px #586242, -6px -6px 12px #708454;
 }
 
 .dark {
@@ -133,11 +139,55 @@
 }
 
 .neu-button:hover {
-  box-shadow: 8px 8px 16px #c0bcb8, -8px -8px 16px #eeebe6;
+  box-shadow: var(--shadow-floating);
+  transform: translateY(-1px);
 }
 
 .neu-button:active {
   box-shadow: var(--shadow-pressed);
+  transform: translateY(0);
+}
+
+/* Enhanced section-specific styling */
+.neu-section-dimensions {
+  background: var(--neu-medium);
+  box-shadow: var(--shadow-sage-inset);
+}
+
+.neu-section-co2 {
+  background: var(--neu-medium-dark);
+  box-shadow: var(--shadow-olive-inset);
+}
+
+.neu-section-schedule {
+  background: var(--neu-medium-light);
+  box-shadow: var(--shadow-inset-light);
+}
+
+.neu-cylinder-button {
+  background: var(--neu-light);
+  box-shadow: var(--shadow-raised-light);
+  border: none;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  color: var(--neu-darkest);
+}
+
+.neu-cylinder-button:hover {
+  box-shadow: var(--shadow-floating);
+  transform: translateY(-2px);
+  background: var(--neu-medium-light);
+}
+
+.neu-cylinder-button.selected {
+  background: var(--neu-medium-dark);
+  box-shadow: var(--shadow-olive-inset);
+  color: var(--neu-light);
+  transform: none;
+}
+
+.neu-cylinder-button.selected:hover {
+  box-shadow: var(--shadow-olive-inset);
 }
 
 .neu-input {
