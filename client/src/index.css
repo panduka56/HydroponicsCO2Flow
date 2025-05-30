@@ -4,57 +4,42 @@
 @tailwind utilities;
 
 :root {
-  --background: 210 11% 98%; /* #F5F7FA - Light blue-grey */
-  --foreground: 210 11% 15%; /* #1E2328 - Dark blue-grey */
-  --muted: 210 11% 94%; /* #F0F2F5 */
-  --muted-foreground: 210 9% 45%; /* #6B7280 */
-  --popover: 0 0% 100%; /* #FFFFFF */
-  --popover-foreground: 210 11% 15%;
-  --card: 0 0% 100%; /* #FFFFFF */
-  --card-foreground: 210 11% 15%;
-  --border: 210 11% 87%; /* #D1D5DB */
-  --input: 210 11% 94%; /* #F0F2F5 */
-  --primary: 145 63% 42%; /* #16A085 - Teal green */
-  --primary-foreground: 0 0% 98%;
-  --secondary: 210 11% 94%;
-  --secondary-foreground: 210 11% 15%;
-  --accent: 145 63% 95%; /* Light teal */
-  --accent-foreground: 145 63% 20%;
-  --destructive: 0 84% 60%;
-  --destructive-foreground: 0 0% 98%;
-  --ring: 145 63% 42%;
-  --radius: 0.75rem;
+  /* Neumorphism earthy color palette */
+  --background: #D7D3CF; /* Light beige background */
+  --foreground: #173015; /* Deep forest green text */
+  --muted: #B5B19C; /* Warm grey */
+  --muted-foreground: #64734B; /* Medium olive */
+  --popover: #D7D3CF; /* Light beige */
+  --popover-foreground: #173015;
+  --card: #D7D3CF; /* Light beige cards */
+  --card-foreground: #173015;
+  --border: #B5B19C; /* Warm grey borders */
+  --input: #B5B19C; /* Warm grey inputs */
+  --primary: #64734B; /* Medium olive primary */
+  --primary-foreground: #D7D3CF;
+  --secondary: #909470; /* Sage green */
+  --secondary-foreground: #173015;
+  --accent: #3A512D; /* Dark olive */
+  --accent-foreground: #D7D3CF;
+  --destructive: #8B4513; /* Earth brown for errors */
+  --destructive-foreground: #D7D3CF;
+  --ring: #64734B;
+  --radius: 1.5rem; /* Larger radius for neumorphism */
   
-  /* Enhanced hydroponics color palette */
-  --primary-emerald: 145 63% 42%; /* #16A085 - Main brand teal */
-  --primary-forest: 140 65% 30%; /* #0F7B6C - Darker teal */
-  --primary-mint: 145 63% 95%; /* #E8F8F5 - Very light teal */
-  --primary-sage: 145 20% 65%; /* #9CAEA9 - Muted sage green */
+  /* Neumorphism specific colors */
+  --neu-light: #D7D3CF; /* Lightest shade */
+  --neu-medium-light: #B5B19C; /* Medium light */
+  --neu-medium: #909470; /* Medium */
+  --neu-medium-dark: #64734B; /* Medium dark */
+  --neu-dark: #3A512D; /* Dark */
+  --neu-darkest: #173015; /* Darkest */
+  --neu-very-dark: #050F07; /* Very dark accent */
   
-  --secondary-blue: 207 90% 54%; /* #1976D2 - Info blue */
-  --secondary-navy: 210 50% 25%; /* #2C3E50 - Dark navy */
-  --secondary-sky: 207 90% 95%; /* #E3F2FD - Light sky blue */
-  
-  --accent-orange: 25 95% 53%; /* #FF6B35 - Vibrant orange */
-  --accent-amber: 45 93% 47%; /* #F39C12 - Golden amber */
-  --accent-coral: 14 100% 57%; /* #FF5722 - Safety coral */
-  
-  --warning-yellow: 45 93% 58%; /* #F1C40F - Warning yellow */
-  --warning-bg: 45 93% 95%; /* #FEF9E7 - Light yellow bg */
-  
-  --danger-red: 4 90% 58%; /* #E74C3C - Error red */
-  --danger-bg: 4 90% 96%; /* #FDEDEC - Light red bg */
-  
-  --success-green: 122 39% 49%; /* #27AE60 - Success green */
-  --success-bg: 122 39% 96%; /* #E8F8F5 - Light green bg */
-  
-  --neutral-slate: 210 11% 71%; /* #9CA3AF - Medium grey */
-  --neutral-charcoal: 210 11% 20%; /* #374151 - Dark charcoal */
-  
-  /* Gradient definitions */
-  --gradient-primary: linear-gradient(135deg, hsl(145 63% 42%) 0%, hsl(140 65% 30%) 100%);
-  --gradient-secondary: linear-gradient(135deg, hsl(207 90% 54%) 0%, hsl(210 50% 25%) 100%);
-  --gradient-accent: linear-gradient(135deg, hsl(25 95% 53%) 0%, hsl(45 93% 47%) 100%);
+  /* Neumorphism shadows */
+  --shadow-inset-light: inset 6px 6px 12px #c4c0bc, inset -6px -6px 12px #eae6e2;
+  --shadow-raised-light: 6px 6px 12px #c4c0bc, -6px -6px 12px #eae6e2;
+  --shadow-pressed: inset 4px 4px 8px #c4c0bc, inset -4px -4px 8px #eae6e2;
+  --shadow-floating: 8px 8px 16px #c4c0bc, -8px -8px 16px #eae6e2;
 }
 
 .dark {
@@ -91,82 +76,171 @@
   }
 }
 
-/* Custom utility classes for the hydroponics calculator */
+/* Neumorphism utility classes for the hydroponics calculator */
 .font-inter {
   font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', sans-serif;
 }
 
-/* Primary emerald/teal colors */
-.text-primary-emerald { color: hsl(var(--primary-emerald)); }
-.text-primary-forest { color: hsl(var(--primary-forest)); }
-.text-primary-sage { color: hsl(var(--primary-sage)); }
-.bg-primary-emerald { background-color: hsl(var(--primary-emerald)); }
-.bg-primary-forest { background-color: hsl(var(--primary-forest)); }
-.bg-primary-mint { background-color: hsl(var(--primary-mint)); }
-.border-primary-emerald { border-color: hsl(var(--primary-emerald)); }
+/* Neumorphism color classes */
+.text-neu-light { color: var(--neu-light); }
+.text-neu-medium-light { color: var(--neu-medium-light); }
+.text-neu-medium { color: var(--neu-medium); }
+.text-neu-medium-dark { color: var(--neu-medium-dark); }
+.text-neu-dark { color: var(--neu-dark); }
+.text-neu-darkest { color: var(--neu-darkest); }
+.text-neu-very-dark { color: var(--neu-very-dark); }
 
-/* Secondary blue colors */
-.text-secondary-blue { color: hsl(var(--secondary-blue)); }
-.text-secondary-navy { color: hsl(var(--secondary-navy)); }
-.bg-secondary-blue { background-color: hsl(var(--secondary-blue)); }
-.bg-secondary-navy { background-color: hsl(var(--secondary-navy)); }
-.bg-secondary-sky { background-color: hsl(var(--secondary-sky)); }
-.border-secondary-blue { border-color: hsl(var(--secondary-blue)); }
+.bg-neu-light { background-color: var(--neu-light); }
+.bg-neu-medium-light { background-color: var(--neu-medium-light); }
+.bg-neu-medium { background-color: var(--neu-medium); }
+.bg-neu-medium-dark { background-color: var(--neu-medium-dark); }
+.bg-neu-dark { background-color: var(--neu-dark); }
+.bg-neu-darkest { background-color: var(--neu-darkest); }
+.bg-neu-very-dark { background-color: var(--neu-very-dark); }
 
-/* Accent orange/amber colors */
-.text-accent-orange { color: hsl(var(--accent-orange)); }
-.text-accent-amber { color: hsl(var(--accent-amber)); }
-.text-accent-coral { color: hsl(var(--accent-coral)); }
-.bg-accent-orange { background-color: hsl(var(--accent-orange)); }
-.bg-accent-amber { background-color: hsl(var(--accent-amber)); }
-.bg-accent-coral { background-color: hsl(var(--accent-coral)); }
-.border-accent-orange { border-color: hsl(var(--accent-orange)); }
+/* Neumorphism shadow effects */
+.neu-raised {
+  background: var(--neu-light);
+  box-shadow: var(--shadow-raised-light);
+  border: none;
+}
 
-/* Status colors */
-.text-warning-yellow { color: hsl(var(--warning-yellow)); }
-.text-danger-red { color: hsl(var(--danger-red)); }
-.text-success-green { color: hsl(var(--success-green)); }
-.bg-warning-yellow { background-color: hsl(var(--warning-yellow)); }
-.bg-warning-bg { background-color: hsl(var(--warning-bg)); }
-.bg-danger-red { background-color: hsl(var(--danger-red)); }
-.bg-danger-bg { background-color: hsl(var(--danger-bg)); }
-.bg-success-green { background-color: hsl(var(--success-green)); }
-.bg-success-bg { background-color: hsl(var(--success-bg)); }
-.border-warning-yellow { border-color: hsl(var(--warning-yellow)); }
-.border-danger-red { border-color: hsl(var(--danger-red)); }
-.border-success-green { border-color: hsl(var(--success-green)); }
+.neu-inset {
+  background: var(--neu-light);
+  box-shadow: var(--shadow-inset-light);
+  border: none;
+}
 
-/* Neutral colors */
-.text-neutral-slate { color: hsl(var(--neutral-slate)); }
-.text-neutral-charcoal { color: hsl(var(--neutral-charcoal)); }
-.bg-neutral-slate { background-color: hsl(var(--neutral-slate)); }
-.bg-neutral-charcoal { background-color: hsl(var(--neutral-charcoal)); }
+.neu-pressed {
+  background: var(--neu-light);
+  box-shadow: var(--shadow-pressed);
+  border: none;
+}
 
-/* Gradient utilities */
-.bg-gradient-primary { background: var(--gradient-primary); }
-.bg-gradient-secondary { background: var(--gradient-secondary); }
-.bg-gradient-accent { background: var(--gradient-accent); }
+.neu-floating {
+  background: var(--neu-light);
+  box-shadow: var(--shadow-floating);
+  border: none;
+}
 
-/* Enhanced visual effects */
-.card-hover {
+/* Interactive neumorphism elements */
+.neu-button {
+  background: var(--neu-light);
+  box-shadow: var(--shadow-raised-light);
+  border: none;
+  transition: all 0.2s ease;
+  cursor: pointer;
+}
+
+.neu-button:hover {
+  box-shadow: 8px 8px 16px #c0bcb8, -8px -8px 16px #eeebe6;
+}
+
+.neu-button:active {
+  box-shadow: var(--shadow-pressed);
+}
+
+.neu-input {
+  background: var(--neu-light);
+  box-shadow: var(--shadow-inset-light);
+  border: none;
+  transition: all 0.2s ease;
+}
+
+.neu-input:focus {
+  box-shadow: inset 8px 8px 16px #c0bcb8, inset -8px -8px 16px #eeebe6;
+  outline: none;
+}
+
+.neu-card {
+  background: var(--neu-light);
+  box-shadow: var(--shadow-raised-light);
+  border: none;
   transition: all 0.3s ease;
 }
-.card-hover:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+
+.neu-card:hover {
+  box-shadow: var(--shadow-floating);
 }
 
-.glass-effect {
-  background: rgba(255, 255, 255, 0.9);
+/* Neumorphism navigation */
+.neu-nav {
+  background: var(--neu-light);
+  box-shadow: 0 4px 20px rgba(196, 192, 188, 0.3);
   backdrop-filter: blur(10px);
-  border: 1px solid rgba(255, 255, 255, 0.2);
 }
 
-.pulse-animation {
-  animation: pulse 2s infinite;
+.neu-nav-item {
+  background: transparent;
+  border-radius: 1rem;
+  transition: all 0.2s ease;
+  position: relative;
 }
 
-@keyframes pulse {
-  0%, 100% { opacity: 1; }
-  50% { opacity: 0.7; }
+.neu-nav-item:hover {
+  background: var(--neu-light);
+  box-shadow: var(--shadow-raised-light);
+}
+
+.neu-nav-item.active {
+  background: var(--neu-light);
+  box-shadow: var(--shadow-inset-light);
+}
+
+/* Typography hierarchy */
+.neu-heading-primary {
+  color: var(--neu-darkest);
+  font-weight: 700;
+  letter-spacing: -0.025em;
+}
+
+.neu-heading-secondary {
+  color: var(--neu-dark);
+  font-weight: 600;
+  letter-spacing: -0.015em;
+}
+
+.neu-text-primary {
+  color: var(--neu-darkest);
+}
+
+.neu-text-secondary {
+  color: var(--neu-medium-dark);
+}
+
+.neu-text-muted {
+  color: var(--neu-medium);
+}
+
+/* Special effects */
+.neu-pulse {
+  animation: neuPulse 2s infinite;
+}
+
+@keyframes neuPulse {
+  0%, 100% {
+    box-shadow: var(--shadow-raised-light);
+  }
+  50% {
+    box-shadow: var(--shadow-floating);
+  }
+}
+
+.neu-glow {
+  position: relative;
+}
+
+.neu-glow::before {
+  content: '';
+  position: absolute;
+  inset: -2px;
+  background: linear-gradient(45deg, var(--neu-medium-dark), var(--neu-dark));
+  border-radius: inherit;
+  z-index: -1;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.neu-glow:hover::before {
+  opacity: 0.1;
 }
